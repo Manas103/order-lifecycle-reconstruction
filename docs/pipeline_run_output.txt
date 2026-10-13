@@ -1,0 +1,31 @@
+run 1: numOrders=3100000 countPerReason=3680
+run 1: 12,373,258 events written, 3,100,000 lifecycles, 18,400 corrections (59,480 ms)
+  UNLINKABLE_ORDER_ID          3,680
+  DUPLICATE_NEW                3,680
+  NEGATIVE_OR_ZERO_QTY         3,680
+  TIMESTAMP_BEFORE_NEW         3,680
+  FILL_EXCEEDS_DECLARED_QTY    3,680
+  Rule 605-style stats by size category:
+    BLOCK            orders=155148    executed=127270    avg_time_to_exec_ms=1653.0589  avg_fill_rate_pct=94.40
+    FRACTIONAL       orders=156097    executed=128141    avg_time_to_exec_ms=1646.8840  avg_fill_rate_pct=94.40
+    ODD_LOT          orders=464871    executed=381332    avg_time_to_exec_ms=1652.7074  avg_fill_rate_pct=94.41
+    ROUND_LOT_LARGE  orders=309647    executed=254096    avg_time_to_exec_ms=1646.9377  avg_fill_rate_pct=94.44
+    ROUND_LOT_MEDIUM orders=773756    executed=634675    avg_time_to_exec_ms=1651.6275  avg_fill_rate_pct=94.42
+    ROUND_LOT_SMALL  orders=1240481   executed=1017328   avg_time_to_exec_ms=1649.6376  avg_fill_rate_pct=94.42
+
+run 2: numOrders=3100000 countPerReason=3680 (same seed, fresh database)
+run 2: 12,373,258 events written, 3,100,000 lifecycles, 18,400 corrections (62,432 ms)
+  UNLINKABLE_ORDER_ID          3,680
+  DUPLICATE_NEW                3,680
+  NEGATIVE_OR_ZERO_QTY         3,680
+  TIMESTAMP_BEFORE_NEW         3,680
+  FILL_EXCEEDS_DECLARED_QTY    3,680
+  Rule 605-style stats by size category:
+    BLOCK            orders=155148    executed=127270    avg_time_to_exec_ms=1653.0589  avg_fill_rate_pct=94.40
+    FRACTIONAL       orders=156097    executed=128141    avg_time_to_exec_ms=1646.8840  avg_fill_rate_pct=94.40
+    ODD_LOT          orders=464871    executed=381332    avg_time_to_exec_ms=1652.7074  avg_fill_rate_pct=94.41
+    ROUND_LOT_LARGE  orders=309647    executed=254096    avg_time_to_exec_ms=1646.9377  avg_fill_rate_pct=94.44
+    ROUND_LOT_MEDIUM orders=773756    executed=634675    avg_time_to_exec_ms=1651.6275  avg_fill_rate_pct=94.42
+    ROUND_LOT_SMALL  orders=1240481   executed=1017328   avg_time_to_exec_ms=1649.6376  avg_fill_rate_pct=94.42
+
+REPRODUCIBILITY: PASS -- every figure reproduced exactly on re-run.

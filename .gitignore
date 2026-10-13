@@ -1,0 +1,11 @@
+# compiled output
+build/
+*.class
+
+# H2 driver jar, fetched into lib/ with the curl command in the README
+# (Maven Central, com.h2database:h2:2.3.232) -- not vendored, see README
+lib/*.jar
+
+# IDE
+.idea/
+*.iml
